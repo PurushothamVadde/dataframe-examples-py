@@ -13,7 +13,6 @@ if __name__ == '__main__':
     spark = SparkSession \
         .builder \
         .appName("Read Files") \
-        .master('local[*]') \
         .getOrCreate()
 
     spark.sparkContext.setLogLevel('ERROR')
@@ -46,4 +45,4 @@ if __name__ == '__main__':
 
     spark.stop()
 
-# spark-submit --packages "org.apache.hadoop:hadoop-aws:2.7.4" dataframe/ingestion/files/json_df.py
+# spark-submit --master yarn --packages "org.apache.hadoop:hadoop-aws:2.7.4" dataframe/ingestion/files/json_df.py
