@@ -74,7 +74,7 @@ if __name__ == '__main__':
         .show(5)
 
     omo_daily_freq \
-        .repartition(5) \
+        .coalesce(1) \
         .write \
         .mode("overwrite") \
         .parquet("s3a://" + app_conf["s3_conf"]["s3_bucket"] + "/nyc_omo_data")

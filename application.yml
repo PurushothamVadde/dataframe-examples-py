@@ -1,5 +1,5 @@
 s3_conf:
-  s3_bucket: dataframe-s3
+  s3_bucket: DataEngineering
 
 sftp_conf:
     filetype: csv
