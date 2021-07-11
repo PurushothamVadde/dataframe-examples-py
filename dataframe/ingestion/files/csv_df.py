@@ -9,7 +9,7 @@ if __name__ == '__main__':
         .builder \
         .appName("Read Files") \
         .config('spark.jars.packages', 'org.apache.hadoop:hadoop-aws:2.7.4') \
-        .config("spark.hadoop.fs.s3a.multiobjectdelete.enable", "false")\
+        .config("spark.hadoop.fs.s3a.multiobjectdelete.enable", "True")\
         .getOrCreate()
         # .master('local[*]') \
     spark.sparkContext.setLogLevel('ERROR')
